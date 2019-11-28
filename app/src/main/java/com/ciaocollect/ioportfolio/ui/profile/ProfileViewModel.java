@@ -1,19 +1,28 @@
 package com.ciaocollect.ioportfolio.ui.profile;
 
+import android.app.Application;
+
+import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.ViewModel;
 
-public class ProfileViewModel extends ViewModel {
+import com.ciaocollect.ioportfolio.R;
 
-    private MutableLiveData<String> mText;
+public class ProfileViewModel extends AndroidViewModel {
 
-    public ProfileViewModel() {
-        mText = new MutableLiveData<>();
-        //mText.setValue("This is dashboard fragment");//irin
+    private MutableLiveData<String> mTextName;
+    private MutableLiveData<String> mTextSummary;
+
+    public ProfileViewModel(Application context) {
+        super(context);
+        mTextName = new MutableLiveData<>();
+        mTextSummary = new MutableLiveData<>();
+        mTextName.setValue(context.getString(R.string.profile_name));
+        mTextSummary.setValue(context.getString(R.string.profile_summary));
     }
 
-    public LiveData<String> getText() {
-        return mText;
+    public LiveData<String> getTextName() {
+        return mTextName;
     }
+    public LiveData<String> getTextSummary() { return mTextSummary; }
 }
