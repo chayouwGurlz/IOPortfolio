@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_person_black_24dp"
+        android:title="@string/title_profile" />
+
+    <item
+        android:id="@+id/navigation_work"
+        android:icon="@drawable/ic_work_black_24dp"
+        android:title="@string/title_work" />
+
+    <item
+        android:id="@+id/navigation_skill"
+        android:icon="@drawable/ic_assignment_black_24dp"
+        android:title="@string/title_skill" />
+
+    <item
+        android:id="@+id/navigation_study"
+        android:icon="@drawable/ic_insert_drive_file_black_24dp"
+        android:title="@string/title_study" />
+
+    <item
+        android:id="@+id/navigation_contact"
+        android:icon="@drawable/ic_email_black_24dp"
+        android:title="@string/title_contact" />
+
+</menu>
