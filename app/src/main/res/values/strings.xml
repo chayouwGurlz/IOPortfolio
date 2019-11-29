@@ -7,4 +7,82 @@
     <string name="title_contact">Contact</string>
     <string name="profile_name">Irine Octaviana</string>
     <string name="profile_summary">Junior Game Programmer over 4 years of experience in Android porting game in AAA\'s studio. Experienced with Android feature implementation and bug fixing. Enthusiast with build multiple platform and new features technology. Bring good positive atmosphere in team working. Taking Informatics linear education. Certified in programming class.</string>
+
+    <string name="foodies_title">Foodies, Gameloft (2019 - present)</string>
+    <string-array name="foodies_implement">
+        <item>Tracking in UWP (Universal Windows Platform)</item>
+        <item>Ads in UWP</item>
+        <item>UWP Landscape Design</item>
+    </string-array>
+    <string-array name="foodies_bugfix">
+        <item>UWP Landscape Design</item>
+        <item>Tracking</item>
+        <item>Forbidden Identifier (GDPR / COPPA)</item>
+    </string-array>
+    <string-array name="foodies_documentation">
+        <item>Previous implementation</item>
+        <item>Project Introduction</item>
+    </string-array>
+
+    <string name="mlp_title">My Little Pony, Gameloft (2018 – 2019)</string>
+    <string-array name="mlp_bugfix">
+        <item>Gaming CRM</item>
+        <item>Ads</item>
+        <item>Audio</item>
+        <item>Crash test</item>
+        <item>Interrupt test</item>
+    </string-array>
+    <string-array name="mlp_other">
+        <item>Merging source code with other platform</item>
+        <item>Customer care technical support</item>
+    </string-array>
+
+    <string name="rnd_title">Research and Development, Gameloft (2018)</string>
+    <string-array name="rnd_topic">
+        <item>Ads</item>
+        <item>Tracking</item>
+        <item>Google Firebase Instrumentation Test</item>
+        <item>Google Firebase Game Loop Test</item>
+        <item>Google Firebase Pre-launch Reports</item>
+    </string-array>
+    <string name="rnd_other">Documentation from previous research</string>
+
+    <string name="pcr_title">2D Point Car Rush Prototype, Side Project Contest (2018)</string>
+    <string-array name="pcr_other">
+        <item>Idea Founder</item>
+        <item>Implement UI</item>
+        <item>Bug fix multiplayer logical part </item>
+    </string-array>
+
+    <string name="dr_title">Dead Rivals, Gameloft (2017 – 2018)</string>
+    <string-array name="dr_bugfix">
+        <item>Simple crash test</item>
+        <item>Ads</item>
+        <item>Forbidden Identifier (GDPR / COPPA)</item>
+    </string-array>
+    <string-array name="dr_implement">
+        <item>Android specific features (back key, virtual keyboard, ultrawide UI)</item>
+        <item>Ads</item>
+    </string-array>
+    <string-array name="dr_other">
+        <item>Customer care technical support</item>
+        <item>Check and add item data on gaming CRM</item>
+        <item>Documentation from previous implementation</item>
+    </string-array>
+
+    <string name="uno_title">Uno And Friends, Gameloft (2016 – 2017)</string>
+    <string-array name="uno_bugfix">
+        <item>Push Notification</item>
+        <item>Tracking data</item>
+        <item>UI Android installer</item>
+        <item>Optimization UI on low devices</item>
+        <item>Ads</item>
+    </string-array>
+    <string name="uno_other">Implement Google IAP Redeem</string>
+
+    <string name="moe_title">March Of Empires, Gameloft (2015 – 2016)</string>
+    <string-array name="moe_bugfix">
+        <item>UI Flash</item>
+        <item>Back key Android</item>
+    </string-array>
 </resources>

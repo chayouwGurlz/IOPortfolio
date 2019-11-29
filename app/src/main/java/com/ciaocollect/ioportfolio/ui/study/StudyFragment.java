@@ -23,13 +23,13 @@ public class StudyFragment extends Fragment {
         studyViewModel =
                 ViewModelProviders.of(this).get(StudyViewModel.class);
         View root = inflater.inflate(R.layout.fragment_work, container, false);
-        final TextView textView = root.findViewById(R.id.text_home);
+        /*final TextView textView = root.findViewById(R.id.text_home);
         studyViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
             }
-        });
+        });*/
         return root;
     }
 }

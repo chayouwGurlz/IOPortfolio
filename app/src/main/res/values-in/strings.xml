@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Portofolio IO</string>
+    <string name="title_profile">Profil</string>
+    <string name="title_work">Pekerjaan</string>
+    <string name="title_skill">Kemampuan</string>
+    <string name="title_study">Pendidikan</string>
+    <string name="title_contact">Kontak</string>
+    <string name="profile_name">Irine Octaviana</string>
+    <string name="profile_summary">Programmer Junior berpengalaman lebih dari 4 tahun di porting game Android di studio AAA. Berpengalaman dengan fitur implementasi Android dan memperbaiki bug. Sangat antusias dengan build berbagai macam platform dan teknologi fitur terbaru. Membawa suasana yang positif dalam kerja tim. Mengambil pendidikan Informatika secara linear. Bersertifikasi di dalam kelas pemrograman.</string>
+
+    <string name="foodies_title">Foodies, Gameloft (2019 - sekarang)</string>
+    <string-array name="foodies_implement">
+        <item>Pelacakan di UWP (Universal Windows Platform)</item>
+        <item>Pengiklanan di UWP</item>
+        <item>Desain lanskap di UWP</item>
+    </string-array>
+    <string-array name="foodies_bugfix">
+        <item>Desain lanskap UWP</item>
+        <item>Pelacakan</item>
+        <item>Identifikasi yang dilarang (GDPR / COPPA)</item>
+    </string-array>
+    <string-array name="foodies_documentation">
+        <item>Implementasi sebelumnya</item>
+        <item>Pengenalan proyek</item>
+    </string-array>
+
+    <string name="mlp_title">My Little Pony, Gameloft (2018 – 2019)</string>
+    <string-array name="mlp_bugfix">
+        <item>CRM dalam Permainan</item>
+        <item>Pengiklanan</item>
+        <item>Suara</item>
+        <item>Tes crash</item>
+        <item>Tes interrupt</item>
+    </string-array>
+    <string-array name="mlp_other">
+        <item>Menggabungkan kode dengan platform lain</item>
+        <item>Dukungan teknis layanan pelanggan</item>
+    </string-array>
+
+    <string name="rnd_title">Penelitian dan Pengembangan, Gameloft (2018)</string>
+    <string-array name="rnd_topic">
+        <item>Pengiklanan</item>
+        <item>Pelacakan</item>
+        <item>Google Firebase Tes Instrumentasi</item>
+        <item>Google Firebase Tes Game Loop</item>
+        <item>Google Firebase Laporan Pra-luncur</item>
+    </string-array>
+    <string name="rnd_other">Dokumentasi dari penelitian sebelumnya</string>
+
+    <string name="pcr_title">Prototipe Mobil Titik Cepat 2D, Kontes pekerjaan sampingan (2018)</string>
+    <string-array name="pcr_other">
+        <item>Pemilik Ide</item>
+        <item>Implementasi antar muka</item>
+        <item>Perbaikan bug pada logika multiplayer</item>
+    </string-array>
+
+    <string name="dr_title">Dead Rivals, Gameloft (2017 – 2018)</string>
+    <string-array name="dr_bugfix">
+        <item>Tes crash sederhana</item>
+        <item>Pengiklanan</item>
+        <item>Identifikasi yang dilarang (GDPR / COPPA)</item>
+    </string-array>
+    <string-array name="dr_implement">
+        <item>Fitur spesifik Android (tombol kembali, keyboard virtual, antar muka ultrawide)</item>
+        <item>Pengiklanan</item>
+    </string-array>
+    <string-array name="dr_other">
+        <item>Dukungan teknis layanan pelanggan</item>
+        <item>Mengecek dan menambah data barang pada CRM permainan</item>
+        <item>Dokumentasi dari implementasi sebelumnya</item>
+    </string-array>
+
+    <string name="uno_title">Uno And Friends, Gameloft (2016 – 2017)</string>
+    <string-array name="uno_bugfix">
+        <item>Pemberitahuan push</item>
+        <item>Pelacakan</item>
+        <item>Antarmuka instalasi Android</item>
+        <item>Optimisasi antarmuka pada on perangkat spesifikasi rendah</item>
+        <item>Ads</item>
+    </string-array>
+    <string name="uno_other">Implementasi Google IAP Redeem</string>
+
+    <string name="moe_title">March Of Empires, Gameloft (2015 – 2016)</string>
+    <string-array name="moe_bugfix">
+        <item>Antarmuka Flash</item>
+        <item>Tombol kembali Android</item>
+    </string-array>
+</resources>
