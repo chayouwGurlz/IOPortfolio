@@ -1,19 +1,68 @@
 package com.ciaocollect.ioportfolio.ui.work;
 
+import android.app.Application;
+
+import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.ViewModel;
 
-public class WorkViewModel extends ViewModel {
+import com.ciaocollect.ioportfolio.R;
 
-    private MutableLiveData<String> mText;
+public class WorkViewModel extends AndroidViewModel {
 
-    public WorkViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is notifications fragment");
+    private MutableLiveData<String[]> moeDescription;
+    private MutableLiveData<String[]> unoDescription;
+    private MutableLiveData<String[]> drDescription;
+    private MutableLiveData<String[]> pcrDescription;
+    private MutableLiveData<String[]> rndDescription;
+    private MutableLiveData<String[]> mlpDescription;
+    private MutableLiveData<String[]> foodiesDescription;
+    private MutableLiveData<String[]> titleWork;
+
+    public LiveData<String[]> getMoeDescription() {
+        return moeDescription;
+    }
+    public LiveData<String[]> getUnoDescription() {
+        return unoDescription;
+    }
+    public LiveData<String[]> getDrDescription() {
+        return drDescription;
+    }
+    public LiveData<String[]> getPcrDescription() {
+        return pcrDescription;
+    }
+    public LiveData<String[]> getRndDescription() {
+        return rndDescription;
+    }
+    public LiveData<String[]> getMlpDescription() {
+        return mlpDescription;
+    }
+    public LiveData<String[]> getFoodiesDescription() {
+        return foodiesDescription;
+    }
+    public LiveData<String[]> getTitleWork() {
+        return titleWork;
     }
 
-    public LiveData<String> getText() {
-        return mText;
+    public WorkViewModel(Application context) {
+        super(context);
+        moeDescription = new MutableLiveData<String[]>();
+        unoDescription = new MutableLiveData<String[]>();
+        drDescription = new MutableLiveData<String[]>();
+        pcrDescription = new MutableLiveData<String[]>();
+        rndDescription = new MutableLiveData<String[]>();
+        mlpDescription = new MutableLiveData<String[]>();
+        foodiesDescription = new MutableLiveData<String[]>();
+        titleWork = new MutableLiveData<String[]>();
+
+        moeDescription.postValue(context.getResources().getStringArray(R.array.moe_description));
+        unoDescription.postValue(context.getResources().getStringArray(R.array.uno_description));
+        drDescription.postValue(context.getResources().getStringArray(R.array.dr_description));
+        pcrDescription.postValue(context.getResources().getStringArray(R.array.pcr_description));
+        rndDescription.postValue(context.getResources().getStringArray(R.array.rnd_description));
+        mlpDescription.postValue(context.getResources().getStringArray(R.array.mlp_description));
+        foodiesDescription.postValue(context.getResources().getStringArray(R.array.foodies_description));
+        titleWork.postValue(context.getResources().getStringArray(R.array.work_title));
     }
+
 }

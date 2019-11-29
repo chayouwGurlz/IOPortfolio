@@ -66,7 +66,7 @@ public class CustomExpandableWorkListAdapter extends BaseExpandableListAdapter {
             LayoutInflater layoutInflater = (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = layoutInflater.inflate(R.layout.group_work, null);
         }
-        TextView listTitleTextView = (TextView)convertView.findViewById(R.id.group_foodies);
+        TextView listTitleTextView = (TextView)convertView.findViewById(R.id.groupwork);
         listTitleTextView.setTypeface(null, Typeface.BOLD);
         listTitleTextView.setText(listTitle);
         return convertView;
@@ -79,7 +79,7 @@ public class CustomExpandableWorkListAdapter extends BaseExpandableListAdapter {
             LayoutInflater layoutInflater = (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = layoutInflater.inflate(R.layout.item_work, null);
         }
-        TextView expandedListTextView = (TextView) convertView.findViewById(R.id.item_foodies);
+        TextView expandedListTextView = (TextView) convertView.findViewById(R.id.itemwork);
         expandedListTextView.setText(expandedListText);
         return convertView;
     }
