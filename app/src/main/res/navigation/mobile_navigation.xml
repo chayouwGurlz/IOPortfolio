@@ -14,19 +14,19 @@
     <fragment
         android:id="@+id/navigation_work"
         android:name="com.ciaocollect.ioportfolio.ui.work.WorkFragment"
-        android:label="@string/title_work"
+        android:label="@string/title_work_complete"
         tools:layout="@layout/fragment_work" />
 
     <fragment
         android:id="@+id/navigation_skill"
         android:name="com.ciaocollect.ioportfolio.ui.skill.SkillFragment"
-        android:label="@string/title_skill"
+        android:label="@string/title_skill_complete"
         tools:layout="@layout/fragment_skill" />
 
     <fragment
         android:id="@+id/navigation_study"
         android:name="com.ciaocollect.ioportfolio.ui.study.StudyFragment"
-        android:label="@string/title_study"
+        android:label="@string/title_study_complete"
         tools:layout="@layout/fragment_study" />
 
     <fragment

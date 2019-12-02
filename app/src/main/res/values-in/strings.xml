@@ -3,8 +3,11 @@
     <string name="app_name">Portofolio IO</string>
     <string name="title_profile">Profil</string>
     <string name="title_work">Pekerjaan</string>
+    <string name="title_work_complete">Pengalaman Bekerja</string>
     <string name="title_skill">Kemampuan</string>
+    <string name="title_skill_complete">Kemampuan Teknis &amp; Personal</string>
     <string name="title_study">Pendidikan</string>
+    <string name="title_study_complete">Pendidikan &amp; Sertifikasi</string>
     <string name="title_contact">Kontak</string>
     <string name="profile_name">Irine Octaviana</string>
     <string name="profile_summary">Programmer Junior berpengalaman lebih dari 4 tahun di porting game Android di studio AAA. Berpengalaman dengan fitur implementasi Android dan memperbaiki bug. Sangat antusias dengan build berbagai macam platform dan teknologi fitur terbaru. Membawa suasana yang positif dalam kerja tim. Mengambil pendidikan Informatika secara linear. Bersertifikasi di dalam kelas pemrograman.</string>
@@ -75,5 +78,37 @@
     <string-array name="moe_description">
         <item>Perbaikan bug antarmuka Flash</item>
         <item>Perbaikan bug tombol kembali Android</item>
+    </string-array>
+
+    <string-array name="skill_title">
+        <item>Game Engine</item>
+        <item>Frameworks</item>
+        <item>Framework Antarmuka Otomatis</item>
+        <item>Pelacak Bug</item>
+        <item>Alat Scrum</item>
+        <item>Platform Back-end</item>
+        <item>Version Control System</item>
+        <item>Bahasa Pemrograman</item>
+        <item>Dokumentasi</item>
+        <item>Aplikasi IDE</item>
+        <item>Aplikasi Office</item>
+        <item>Sistem Operasi</item>
+        <item>Kemampuan Personal</item>
+    </string-array>
+
+    <string-array name="skill_description">
+        <item>Unreal Engine, Unity</item>
+        <item>Xamarin</item>
+        <item>AirTest</item>
+        <item>Atlassian Jira</item>
+        <item>Atlassian Jira, Atlassian Trello</item>
+        <item>Microsoft Azure PlayFab</item>
+        <item>Apache Subversion (SVN), GitLab, Atlassian Bitbucket</item>
+        <item>C++, Java Android, C#, Kotlin</item>
+        <item>Atlassian Confluence</item>
+        <item>Microsoft Visual Studio, Android Studio, IntelliJ IDEA</item>
+        <item>Google Docs, Microsoft Office, Libre Office</item>
+        <item>Microsoft Windows, Ubuntu</item>
+        <item>Adaptable, Self Learner, Team Working, Enthusiasm, Willingness to learn, Goal Oriented</item>
     </string-array>
 </resources>
