@@ -1,8 +1,5 @@
 package com.ciaocollect.ioportfolio.ui.skill;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Skill {
     private String name;
     private String description;
@@ -26,15 +23,5 @@ public class Skill {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public static List<Skill> prepareSkill(String[] name, String[] description){
-        List<Skill> skills = new ArrayList<>(name.length);
-
-        for(int i=0; i<name.length; i++){
-            Skill skill = new Skill(name[i], description[i]);
-            skills.add(skill);
-        }
-        return skills;
     }
 }

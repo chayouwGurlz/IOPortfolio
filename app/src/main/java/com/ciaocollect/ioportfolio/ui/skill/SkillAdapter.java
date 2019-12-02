@@ -10,16 +10,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.ciaocollect.ioportfolio.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SkillAdapter extends RecyclerView.Adapter<SkillAdapter.SkillVH> {
     private List<Skill> skill;
     private Context context;
 
-    public SkillAdapter(Context context) {
+    public SkillAdapter(Context context, ArrayList<Skill> skills) {
         this.context = context;
-        skill = Skill.prepareSkill(context.getResources().getStringArray(R.array.skill_title),
-                                   context.getResources().getStringArray(R.array.skill_description));
+        skill = skills;
     }
 
     @Override

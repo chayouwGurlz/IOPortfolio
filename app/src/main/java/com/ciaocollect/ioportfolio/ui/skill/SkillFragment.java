@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -57,15 +56,13 @@ public class SkillFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
-        skillAdapter = new SkillAdapter(getContext());
-        recyclerView.setAdapter(skillAdapter);
 
-        appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
-            @Override
-            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-                    getActivity().invalidateOptionsMenu();
-            }
+        skillViewModel.getListSkill().observe(this, skills -> {
+            skillAdapter = new SkillAdapter(getContext(), skills);
+            recyclerView.setAdapter(skillAdapter);
         });
+
+        appBarLayout.addOnOffsetChangedListener((appBarLayout, verticalOffset) -> getActivity().invalidateOptionsMenu());
         return root;
     }
 }
