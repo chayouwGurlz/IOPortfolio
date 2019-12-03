@@ -16,27 +16,28 @@ import com.ciaocollect.ioportfolio.R;
 
 public class ProfileFragment extends Fragment {
 
-    private ProfileViewModel profileViewModel;
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        profileViewModel =
-                ViewModelProviders.of(this).get(ProfileViewModel.class);
+        ProfileViewModel profileViewModel = ViewModelProviders.of(this).get(ProfileViewModel.class);
         View root = inflater.inflate(R.layout.fragment_profile, container, false);
+
         final TextView tvName = root.findViewById(R.id.profile_name);
         final TextView tvSummary = root.findViewById(R.id.profile_summary);
+
         profileViewModel.getTextName().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 tvName.setText(s);
             }
         });
+
         profileViewModel.getTextSummary().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 tvSummary.setText(s);
             }
         });
+
         return root;
     }
 }

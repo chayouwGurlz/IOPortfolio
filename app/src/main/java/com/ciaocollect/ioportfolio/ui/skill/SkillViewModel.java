@@ -11,19 +11,17 @@ import com.ciaocollect.ioportfolio.R;
 import java.util.ArrayList;
 
 public class SkillViewModel extends AndroidViewModel {
-    ArrayList<Skill> skills = new ArrayList<>();
     private MutableLiveData<ArrayList<Skill>> listSkill = new MutableLiveData<>();
-    public LiveData<ArrayList<Skill>> getListSkill() { return listSkill; }
-    private String[] name;
-    private String[] description;
+    LiveData<ArrayList<Skill>> getListSkill() { return listSkill; }
 
     public SkillViewModel(Application context) {
         super(context);
 
-        name = context.getResources().getStringArray(R.array.skill_title);
-        description = context.getResources().getStringArray(R.array.skill_description);
+        String[] name = context.getResources().getStringArray(R.array.skill_title);
+        String[] description = context.getResources().getStringArray(R.array.skill_description);
 
-        for(int i=0; i<name.length; i++){
+        ArrayList<Skill> skills = new ArrayList<>();
+        for(int i = 0; i< name.length; i++){
             Skill skill = new Skill(name[i], description[i]);
             skills.add(skill);
         }

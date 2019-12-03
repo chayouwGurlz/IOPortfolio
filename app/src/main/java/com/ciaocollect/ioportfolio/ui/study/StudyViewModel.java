@@ -1,19 +1,35 @@
 package com.ciaocollect.ioportfolio.ui.study;
 
+import android.app.Application;
+
+import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.ViewModel;
 
-public class StudyViewModel extends ViewModel {
+import com.ciaocollect.ioportfolio.R;
 
-    private MutableLiveData<String> mText;
+import java.util.ArrayList;
 
-    public StudyViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
-    }
+public class StudyViewModel extends AndroidViewModel {
 
-    public LiveData<String> getText() {
-        return mText;
+    private MutableLiveData<ArrayList<Study>> studies = new MutableLiveData<>();
+    LiveData<ArrayList<Study>> getListSkill() { return studies; }
+
+    public StudyViewModel(Application context) {
+        super(context);
+
+        String[] studyTitle = context.getResources().getStringArray(R.array.study_title);
+        String[] studyDesc = context.getResources().getStringArray(R.array.study_description);
+        String[] studyYear = context.getResources().getStringArray(R.array.study_year);
+
+        ArrayList<Study> listStudy = new ArrayList<>();
+        for (int i=0; i<studyTitle.length; i++){
+            Study study = new Study();
+            study.setTitle(studyTitle[i]);
+            study.setDescription(studyDesc[i]);
+            study.setYear(studyYear[i]);
+            listStudy.add(study);
+        }
+        studies.postValue(listStudy);
     }
 }

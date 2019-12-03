@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ciaocollect.ioportfolio.R;
@@ -15,13 +16,12 @@ import java.util.List;
 
 public class SkillAdapter extends RecyclerView.Adapter<SkillAdapter.SkillVH> {
     private List<Skill> skill;
-    private Context context;
 
-    public SkillAdapter(Context context, ArrayList<Skill> skills) {
-        this.context = context;
+    SkillAdapter(Context context, ArrayList<Skill> skills) {
         skill = skills;
     }
 
+    @NonNull
     @Override
     public SkillAdapter.SkillVH onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
@@ -41,11 +41,11 @@ public class SkillAdapter extends RecyclerView.Adapter<SkillAdapter.SkillVH> {
         return skill == null ? 0:skill.size();
     }
 
-    public static class SkillVH extends RecyclerView.ViewHolder{
+    static class SkillVH extends RecyclerView.ViewHolder{
         private TextView mName;
         private TextView mDescription;
 
-        public SkillVH(View itemView) {
+        SkillVH(View itemView) {
             super(itemView);
 
             mName = itemView.findViewById(R.id.skill_subhead);

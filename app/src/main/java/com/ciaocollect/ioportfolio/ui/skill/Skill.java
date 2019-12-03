@@ -4,7 +4,7 @@ public class Skill {
     private String name;
     private String description;
 
-    public Skill(String name, String description) {
+    Skill(String name, String description) {
         this.name = name;
         this.description = description;
     }
@@ -17,7 +17,7 @@ public class Skill {
         this.name = name;
     }
 
-    public String getDescription() {
+    String getDescription() {
         return description;
     }
 

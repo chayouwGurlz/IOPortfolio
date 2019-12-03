@@ -19,28 +19,28 @@ public class WorkViewModel extends AndroidViewModel {
     private MutableLiveData<String[]> foodiesDescription;
     private MutableLiveData<String[]> titleWork;
 
-    public LiveData<String[]> getMoeDescription() {
+    LiveData<String[]> getMoeDescription() {
         return moeDescription;
     }
-    public LiveData<String[]> getUnoDescription() {
+    LiveData<String[]> getUnoDescription() {
         return unoDescription;
     }
-    public LiveData<String[]> getDrDescription() {
+    LiveData<String[]> getDrDescription() {
         return drDescription;
     }
-    public LiveData<String[]> getPcrDescription() {
+    LiveData<String[]> getPcrDescription() {
         return pcrDescription;
     }
-    public LiveData<String[]> getRndDescription() {
+    LiveData<String[]> getRndDescription() {
         return rndDescription;
     }
-    public LiveData<String[]> getMlpDescription() {
+    LiveData<String[]> getMlpDescription() {
         return mlpDescription;
     }
-    public LiveData<String[]> getFoodiesDescription() {
+    LiveData<String[]> getFoodiesDescription() {
         return foodiesDescription;
     }
-    public LiveData<String[]> getTitleWork() {
+    LiveData<String[]> getTitleWork() {
         return titleWork;
     }
 
@@ -64,5 +64,4 @@ public class WorkViewModel extends AndroidViewModel {
         foodiesDescription.postValue(context.getResources().getStringArray(R.array.foodies_description));
         titleWork.postValue(context.getResources().getStringArray(R.array.work_title));
     }
-
 }

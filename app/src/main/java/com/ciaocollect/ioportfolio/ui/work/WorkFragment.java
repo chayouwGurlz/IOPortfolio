@@ -9,7 +9,6 @@ import android.widget.ExpandableListView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.ciaocollect.ioportfolio.R;
@@ -21,12 +20,9 @@ import java.util.List;
 
 public class WorkFragment extends Fragment {
 
-    private WorkViewModel workViewModel;
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        workViewModel =
-                ViewModelProviders.of(this).get(WorkViewModel.class);
+        WorkViewModel workViewModel = ViewModelProviders.of(this).get(WorkViewModel.class);
         View root = inflater.inflate(R.layout.fragment_work, container, false);
 
         final ArrayList<String> titleWorkList = new ArrayList<>();
@@ -40,72 +36,34 @@ public class WorkFragment extends Fragment {
         final LinkedHashMap<String, List<String>> expandableListDetail = new LinkedHashMap<String, List<String>>();
         final ExpandableListView expandableListView = (ExpandableListView) root.findViewById(R.id.expandablework);
 
-        workViewModel.getMoeDescription().observe(this, new Observer<String[]>() {
-            @Override
-            public void onChanged(String[] moeDescription) {
-                Collections.addAll(moeWorkList, moeDescription);
-            }
-        });
+        workViewModel.getMoeDescription().observe(this, moeDescription -> Collections.addAll(moeWorkList, moeDescription));
 
-        workViewModel.getUnoDescription().observe(this, new Observer<String[]>() {
-            @Override
-            public void onChanged(String[] unoDescription) {
-                Collections.addAll(unoWorkList, unoDescription);
-            }
-        });
+        workViewModel.getUnoDescription().observe(this, unoDescription -> Collections.addAll(unoWorkList, unoDescription));
 
-        workViewModel.getDrDescription().observe(this, new Observer<String[]>() {
-            @Override
-            public void onChanged(String[] drDescription) {
-                Collections.addAll(drWorkList, drDescription);
-            }
-        });
+        workViewModel.getDrDescription().observe(this, drDescription -> Collections.addAll(drWorkList, drDescription));
 
-        workViewModel.getPcrDescription().observe(this, new Observer<String[]>() {
-            @Override
-            public void onChanged(String[] pcrDescription) {
-                Collections.addAll(pcrWorkList, pcrDescription);
-            }
-        });
+        workViewModel.getPcrDescription().observe(this, pcrDescription -> Collections.addAll(pcrWorkList, pcrDescription));
 
-        workViewModel.getRndDescription().observe(this, new Observer<String[]>() {
-            @Override
-            public void onChanged(String[] rndDescription) {
-                Collections.addAll(rndWorkList, rndDescription);
-            }
-        });
+        workViewModel.getRndDescription().observe(this, rndDescription -> Collections.addAll(rndWorkList, rndDescription));
 
-        workViewModel.getMlpDescription().observe(this, new Observer<String[]>() {
-            @Override
-            public void onChanged(String[] mlpDescription) {
-                Collections.addAll(mlpWorkList, mlpDescription);
-            }
-        });
+        workViewModel.getMlpDescription().observe(this, mlpDescription -> Collections.addAll(mlpWorkList, mlpDescription));
 
-        workViewModel.getFoodiesDescription().observe(this, new Observer<String[]>() {
-            @Override
-            public void onChanged(String[] foodiesDescription) {
-                Collections.addAll(foodiesWorkList, foodiesDescription);
-            }
-        });
+        workViewModel.getFoodiesDescription().observe(this, foodiesDescription -> Collections.addAll(foodiesWorkList, foodiesDescription));
 
-        workViewModel.getTitleWork().observe(this, new Observer<String[]>() {
-            @Override
-            public void onChanged(String[] titleWork) {
-                Collections.addAll(titleWorkList, titleWork);
+        workViewModel.getTitleWork().observe(this, titleWork -> {
+            Collections.addAll(titleWorkList, titleWork);
 
-                expandableListDetail.put(titleWorkList.get(0), moeWorkList);
-                expandableListDetail.put(titleWorkList.get(1), unoWorkList);
-                expandableListDetail.put(titleWorkList.get(2), drWorkList);
-                expandableListDetail.put(titleWorkList.get(3), pcrWorkList);
-                expandableListDetail.put(titleWorkList.get(4), rndWorkList);
-                expandableListDetail.put(titleWorkList.get(5), mlpWorkList);
-                expandableListDetail.put(titleWorkList.get(6), foodiesWorkList);
+            expandableListDetail.put(titleWorkList.get(0), moeWorkList);
+            expandableListDetail.put(titleWorkList.get(1), unoWorkList);
+            expandableListDetail.put(titleWorkList.get(2), drWorkList);
+            expandableListDetail.put(titleWorkList.get(3), pcrWorkList);
+            expandableListDetail.put(titleWorkList.get(4), rndWorkList);
+            expandableListDetail.put(titleWorkList.get(5), mlpWorkList);
+            expandableListDetail.put(titleWorkList.get(6), foodiesWorkList);
 
-                List<String> expandableListTitle = new ArrayList<String>(expandableListDetail.keySet());
-                ExpandableListAdapter expandableListAdapter = new WorkAdapter(getContext(), expandableListTitle, expandableListDetail);
-                expandableListView.setAdapter(expandableListAdapter);
-            }
+            List<String> expandableListTitle = new ArrayList<String>(expandableListDetail.keySet());
+            ExpandableListAdapter expandableListAdapter = new WorkAdapter(getContext(), expandableListTitle, expandableListDetail);
+            expandableListView.setAdapter(expandableListAdapter);
         });
         return root;
     }

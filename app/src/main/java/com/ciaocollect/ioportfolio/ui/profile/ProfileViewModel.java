@@ -21,8 +21,8 @@ public class ProfileViewModel extends AndroidViewModel {
         mTextSummary.setValue(context.getString(R.string.profile_summary));
     }
 
-    public LiveData<String> getTextName() {
+    LiveData<String> getTextName() {
         return mTextName;
     }
-    public LiveData<String> getTextSummary() { return mTextSummary; }
+    LiveData<String> getTextSummary() { return mTextSummary; }
 }

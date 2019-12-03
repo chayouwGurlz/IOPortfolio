@@ -14,24 +14,17 @@ import com.ciaocollect.ioportfolio.R;
 import java.util.ArrayList;
 
 public class StudyAdapter extends RecyclerView.Adapter<StudyAdapter.CardViewHolder> {
-    private Context context;
     private ArrayList<Study> listStudy;
 
-    public StudyAdapter(ArrayList<Study> list) {
-        this.listStudy = list;
-    }
-
-    public ArrayList<Study> getListStudy() {
+    private ArrayList<Study> getListStudy() {
         return listStudy;
     }
 
-    public void setListStudy(ArrayList<Study> listStudy) {
+    void setListStudy(ArrayList<Study> listStudy) {
         this.listStudy = listStudy;
     }
 
-    public StudyAdapter(Context context) {
-        this.context = context;
-    }
+    StudyAdapter(Context context) { }
 
     @NonNull
     @Override
@@ -53,7 +46,7 @@ public class StudyAdapter extends RecyclerView.Adapter<StudyAdapter.CardViewHold
         return getListStudy().size();
     }
 
-    public class CardViewHolder extends RecyclerView.ViewHolder {
+    class CardViewHolder extends RecyclerView.ViewHolder {
         TextView tvTitle, tvDesc, tvYear;
         CardViewHolder(View itemView) {
             super(itemView);

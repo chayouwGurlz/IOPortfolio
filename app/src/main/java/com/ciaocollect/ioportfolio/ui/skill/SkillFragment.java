@@ -2,6 +2,7 @@ package com.ciaocollect.ioportfolio.ui.skill;
 
 import androidx.lifecycle.ViewModelProviders;
 
+import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -21,35 +22,31 @@ import com.ciaocollect.ioportfolio.R;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 
+import java.util.Objects;
+
 public class SkillFragment extends Fragment {
 
-    private SkillViewModel skillViewModel;
     private CollapsingToolbarLayout collapsingToolbar;
-    private AppBarLayout appBarLayout;
     private RecyclerView recyclerView;
 
     private SkillAdapter skillAdapter;
 
+    @SuppressLint("ResourceAsColor")
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        skillViewModel =
-                ViewModelProviders.of(this).get(SkillViewModel.class);
+        SkillViewModel skillViewModel = ViewModelProviders.of(this).get(SkillViewModel.class);
         View root = inflater.inflate(R.layout.fragment_skill, container, false);
 
-        appBarLayout = root.findViewById(R.id.skill_appbar);
+        AppBarLayout appBarLayout1 = root.findViewById(R.id.skill_appbar);
         collapsingToolbar = root.findViewById(R.id.skill_collapsToolbar);
         collapsingToolbar.setTitle(getString(R.string.title_skill_complete));
 
         Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.my_skill);
-        Palette.from(bitmap).generate(new Palette.PaletteAsyncListener() {
-            @SuppressWarnings("ResourceType")
-            @Override
-            public void onGenerated(Palette palette) {
-                int vibrantColor = palette.getVibrantColor(R.color.colorPrimary);
-                collapsingToolbar.setContentScrimColor(vibrantColor);
-                collapsingToolbar.setStatusBarScrimColor(R.color.black_trans);
-            }
+        Palette.from(bitmap).generate(palette -> {
+            int vibrantColor = Objects.requireNonNull(palette).getVibrantColor(R.color.colorPrimary);
+            collapsingToolbar.setContentScrimColor(vibrantColor);
+            collapsingToolbar.setStatusBarScrimColor(R.color.black_trans);
         });
 
         recyclerView = root.findViewById(R.id.skill_scrollView);
@@ -62,7 +59,7 @@ public class SkillFragment extends Fragment {
             recyclerView.setAdapter(skillAdapter);
         });
 
-        appBarLayout.addOnOffsetChangedListener((appBarLayout, verticalOffset) -> getActivity().invalidateOptionsMenu());
+        appBarLayout1.addOnOffsetChangedListener((appBarLayout, verticalOffset) -> Objects.requireNonNull(getActivity()).invalidateOptionsMenu());
         return root;
     }
 }

@@ -6,27 +6,27 @@ import android.os.Parcelable;
 public class Study implements Parcelable {
     private String title, description, year;
 
-    public String getTitle() {
+    String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
+    void setTitle(String title) {
         this.title = title;
     }
 
-    public String getDescription() {
+    String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
+    void setDescription(String description) {
         this.description = description;
     }
 
-    public String getYear() {
+    String getYear() {
         return year;
     }
 
-    public void setYear(String year) {
+    void setYear(String year) {
         this.year = year;
     }
 
@@ -42,9 +42,9 @@ public class Study implements Parcelable {
         dest.writeString(this.year);
     }
 
-    public Study() { }
+    Study() { }
 
-    protected Study(Parcel in) {
+    private Study(Parcel in) {
         this.title = in.readString();
         this.description = in.readString();
         this.year = in.readString();
