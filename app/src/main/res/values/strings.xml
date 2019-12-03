@@ -110,4 +110,31 @@
         <item>Microsoft Windows, Ubuntu</item>
         <item>Adaptable, Self Learner, Team Working, Enthusiasm, Willingness to learn, Goal Oriented</item>
     </string-array>
+
+    <string-array name="study_title">
+        <item>Computer Engineering</item>
+        <item>Informatics, Software Engineering Concentration</item>
+        <item>C++ Programmer Technical Guidance</item>
+        <item>Belajar Membuat Aplikasi Android untuk Pemula</item>
+        <item>Memulai Pemrograman dengan Kotlin</item>
+        <item>Beginner English Corner</item>
+    </string-array>
+
+    <string-array name="study_description">
+        <item>Telkom Sandhy Putra Vocational High School</item>
+        <item>Brawijaya University</item>
+        <item>Gameloft Indonesia</item>
+        <item>Dicoding</item>
+        <item>Dicoding</item>
+        <item>Gameloft x Pandu Indonesian Language Course</item>
+    </string-array>
+
+    <string-array name="study_year">
+        <item>2007 – 2010</item>
+        <item>2010 – 2014</item>
+        <item>2015</item>
+        <item>2019 – 2022</item>
+        <item>2019 – 2022</item>
+        <item>2019</item>
+    </string-array>
 </resources>

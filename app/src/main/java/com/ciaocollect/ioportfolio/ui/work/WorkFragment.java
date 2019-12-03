@@ -8,7 +8,6 @@ import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
@@ -104,7 +103,7 @@ public class WorkFragment extends Fragment {
                 expandableListDetail.put(titleWorkList.get(6), foodiesWorkList);
 
                 List<String> expandableListTitle = new ArrayList<String>(expandableListDetail.keySet());
-                ExpandableListAdapter expandableListAdapter = new CustomExpandableWorkListAdapter(getContext(), expandableListTitle, expandableListDetail);
+                ExpandableListAdapter expandableListAdapter = new WorkAdapter(getContext(), expandableListTitle, expandableListDetail);
                 expandableListView.setAdapter(expandableListAdapter);
             }
         });

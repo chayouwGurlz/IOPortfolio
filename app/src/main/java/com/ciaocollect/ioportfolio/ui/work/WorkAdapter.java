@@ -13,12 +13,12 @@ import com.ciaocollect.ioportfolio.R;
 import java.util.HashMap;
 import java.util.List;
 
-public class CustomExpandableWorkListAdapter extends BaseExpandableListAdapter {
+public class WorkAdapter extends BaseExpandableListAdapter {
     private Context context;
     private List<String> expandableListTitle;
     private HashMap<String, List<String>> expandableListDetail;
 
-    public CustomExpandableWorkListAdapter(Context context, List<String> expandableListTitle, HashMap<String, List<String>> expandableListDetail) {
+    public WorkAdapter(Context context, List<String> expandableListTitle, HashMap<String, List<String>> expandableListDetail) {
         this.context = context;
         this.expandableListTitle = expandableListTitle;
         this.expandableListDetail = expandableListDetail;
