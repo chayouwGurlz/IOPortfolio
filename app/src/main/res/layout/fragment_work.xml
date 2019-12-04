@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginBottom="?attr/actionBarSize"
+    android:background="@android:color/white"
     tools:context=".ui.work.WorkFragment">
 
     <ExpandableListView

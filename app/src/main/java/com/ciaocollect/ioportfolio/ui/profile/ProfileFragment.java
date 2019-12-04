@@ -6,10 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.ciaocollect.ioportfolio.R;
@@ -23,20 +21,8 @@ public class ProfileFragment extends Fragment {
 
         final TextView tvName = root.findViewById(R.id.profile_name);
         final TextView tvSummary = root.findViewById(R.id.profile_summary);
-
-        profileViewModel.getTextName().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                tvName.setText(s);
-            }
-        });
-
-        profileViewModel.getTextSummary().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                tvSummary.setText(s);
-            }
-        });
+        profileViewModel.getTextName().observe(this, tvName::setText);
+        profileViewModel.getTextSummary().observe(this, tvSummary::setText);
 
         return root;
     }

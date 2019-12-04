@@ -46,14 +46,14 @@ public class WorkViewModel extends AndroidViewModel {
 
     public WorkViewModel(Application context) {
         super(context);
-        moeDescription = new MutableLiveData<String[]>();
-        unoDescription = new MutableLiveData<String[]>();
-        drDescription = new MutableLiveData<String[]>();
-        pcrDescription = new MutableLiveData<String[]>();
-        rndDescription = new MutableLiveData<String[]>();
-        mlpDescription = new MutableLiveData<String[]>();
-        foodiesDescription = new MutableLiveData<String[]>();
-        titleWork = new MutableLiveData<String[]>();
+        moeDescription = new MutableLiveData<>();
+        unoDescription = new MutableLiveData<>();
+        drDescription = new MutableLiveData<>();
+        pcrDescription = new MutableLiveData<>();
+        rndDescription = new MutableLiveData<>();
+        mlpDescription = new MutableLiveData<>();
+        foodiesDescription = new MutableLiveData<>();
+        titleWork = new MutableLiveData<>();
 
         moeDescription.postValue(context.getResources().getStringArray(R.array.moe_description));
         unoDescription.postValue(context.getResources().getStringArray(R.array.uno_description));

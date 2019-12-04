@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:layout_marginBottom="?attr/actionBarSize"
     tools:context=".ui.skill.SkillFragment"
+    android:background="@android:color/white"
     android:fitsSystemWindows="false">
 
     <com.google.android.material.appbar.AppBarLayout

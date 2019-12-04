@@ -10,6 +10,14 @@
     <string name="title_contact">Contacts</string>
     <string name="profile_name">Irine Octaviana</string>
     <string name="profile_summary">Junior Game Programmer over 4 years of experience in Android porting game in AAA\'s studio. Experienced with Android feature implementation and bug fixing. Enthusiast with build multiple platform and new features technology. Bring good positive atmosphere in team working. Taking Informatics linear education. Certified in programming class.</string>
+    <string name="contact_subhead">Stay in touch…</string>
+    <string name="contact_email">irineoctaviana@yahoo.com</string>
+    <string name="contact_phone">+6285755258855</string>
+    <string name="contact_whatsapp">+6285755258855</string>
+    <string name="contact_linkedin">https://www.linkedin.com/in/irine-octaviana-b95293a2/</string>
+    <string name="contact_github">https://github.com/chayouwGurlz/</string>
+    <string name="contact_location">Jl. Rajawali Gang Parkit No. 6, Depok, Sleman, DI Yogyakarta, Indonesia</string>
+    <string name="contact_info">PS: Click text for more info</string>
 
     <string-array name="work_title">
         <item>March Of Empires, Gameloft (2015 – 2016)</item>
