@@ -21,6 +21,7 @@ public class StudyViewModel extends AndroidViewModel {
         String[] studyTitle = context.getResources().getStringArray(R.array.study_title);
         String[] studyDesc = context.getResources().getStringArray(R.array.study_description);
         String[] studyYear = context.getResources().getStringArray(R.array.study_year);
+        String[] studyLink = context.getResources().getStringArray(R.array.study_link);
 
         ArrayList<Study> listStudy = new ArrayList<>();
         for (int i=0; i<studyTitle.length; i++){
@@ -28,6 +29,7 @@ public class StudyViewModel extends AndroidViewModel {
             study.setTitle(studyTitle[i]);
             study.setDescription(studyDesc[i]);
             study.setYear(studyYear[i]);
+            study.setLink(studyLink[i]);
             listStudy.add(study);
         }
         studies.postValue(listStudy);

@@ -1,6 +1,8 @@
 package com.ciaocollect.ioportfolio.ui.study;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +16,7 @@ import com.ciaocollect.ioportfolio.R;
 import java.util.ArrayList;
 
 public class StudyAdapter extends RecyclerView.Adapter<StudyAdapter.CardViewHolder> {
+    private Context context;
     private ArrayList<Study> listStudy;
 
     private ArrayList<Study> getListStudy() {
@@ -24,7 +27,9 @@ public class StudyAdapter extends RecyclerView.Adapter<StudyAdapter.CardViewHold
         this.listStudy = listStudy;
     }
 
-    StudyAdapter(Context context) { }
+    StudyAdapter(Context context) {
+        this.context = context;
+    }
 
     @NonNull
     @Override
@@ -39,6 +44,10 @@ public class StudyAdapter extends RecyclerView.Adapter<StudyAdapter.CardViewHold
         holder.tvTitle.setText(s.getTitle());
         holder.tvDesc.setText(s.getDescription());
         holder.tvYear.setText(s.getYear());
+        holder.itemView.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(s.getLink()));
+            context.startActivity(intent);
+        });
     }
 
     @Override

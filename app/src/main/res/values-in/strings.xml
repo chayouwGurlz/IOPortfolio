@@ -146,4 +146,13 @@
         <item>2019 – 2022</item>
         <item>2019</item>
     </string-array>
+
+    <string-array name="study_link">
+        <item>https://app.box.com/s/dj1fcmjjv83rs3j3inb1ve7x0ca9b2tp/file/570014149035</item>
+        <item>https://app.box.com/s/dj1fcmjjv83rs3j3inb1ve7x0ca9b2tp/file/570008953397</item>
+        <item>https://app.box.com/s/dj1fcmjjv83rs3j3inb1ve7x0ca9b2tp/file/570000908813</item>
+        <item>https://app.box.com/s/dj1fcmjjv83rs3j3inb1ve7x0ca9b2tp/file/569769541243</item>
+        <item>https://app.box.com/s/dj1fcmjjv83rs3j3inb1ve7x0ca9b2tp/file/569799741988</item>
+        <item>https://app.box.com/s/dj1fcmjjv83rs3j3inb1ve7x0ca9b2tp/file/569775858967</item>
+    </string-array>
 </resources>

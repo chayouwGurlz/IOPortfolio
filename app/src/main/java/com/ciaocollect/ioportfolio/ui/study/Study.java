@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Study implements Parcelable {
-    private String title, description, year;
+    private String title, description, year, link;
 
     String getTitle() {
         return title;
@@ -30,6 +30,10 @@ public class Study implements Parcelable {
         this.year = year;
     }
 
+    String getLink() { return link; }
+
+    void setLink(String link) { this.link = link; }
+
     @Override
     public int describeContents() {
         return 0;
@@ -40,6 +44,7 @@ public class Study implements Parcelable {
         dest.writeString(this.title);
         dest.writeString(this.description);
         dest.writeString(this.year);
+        dest.writeString(this.link);
     }
 
     Study() { }
@@ -48,6 +53,7 @@ public class Study implements Parcelable {
         this.title = in.readString();
         this.description = in.readString();
         this.year = in.readString();
+        this.link = in.readString();
     }
 
     public static final Parcelable.Creator<Study> CREATOR = new Parcelable.Creator<Study>() {

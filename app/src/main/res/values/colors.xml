@@ -4,4 +4,5 @@
     <color name="colorPrimaryDark">#afb42b</color>
     <color name="colorAccent">#D81B60</color>
     <color name="black_trans">#33000000</color>
+    <color name="brown_trans">#B17F60</color>
 </resources>
