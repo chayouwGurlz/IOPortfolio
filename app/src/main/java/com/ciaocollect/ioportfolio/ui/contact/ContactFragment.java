@@ -28,21 +28,16 @@ public class ContactFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_contact, container, false);
-    }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
         ContactViewModel mViewModel = ViewModelProviders.of(this).get(ContactViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_contact, container, false);
 
-        final TextView tvTitle = Objects.requireNonNull(getActivity()).findViewById(R.id.contact_title);
-        final TextView tvEmail = getActivity().findViewById(R.id.contact_email);
-        final TextView tvPhone = getActivity().findViewById(R.id.contact_phone);
-        final TextView tvWhatsapp = getActivity().findViewById(R.id.contact_whatsapp);
-        final TextView tvLinkedin = getActivity().findViewById(R.id.contact_linkedin);
-        final TextView tvGithub = getActivity().findViewById(R.id.contact_github);
-        final TextView tvLocation = getActivity().findViewById(R.id.contact_location);
+        final TextView tvTitle = Objects.requireNonNull(root).findViewById(R.id.contact_title);
+        final TextView tvEmail = root.findViewById(R.id.contact_email);
+        final TextView tvPhone = root.findViewById(R.id.contact_phone);
+        final TextView tvWhatsapp = root.findViewById(R.id.contact_whatsapp);
+        final TextView tvLinkedin = root.findViewById(R.id.contact_linkedin);
+        final TextView tvGithub = root.findViewById(R.id.contact_github);
+        final TextView tvLocation = root.findViewById(R.id.contact_location);
 
         mViewModel.getTextSubhead().observe(this, tvTitle::setText);
         mViewModel.getTextEmail().observe(this, tvEmail::setText);
@@ -81,6 +76,16 @@ public class ContactFragment extends Fragment {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://maps.google.co.id/maps?q=kos putri parkit 4"));
             startActivity(intent);
         });
+        return root;
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+
+
+
     }
 
 }
